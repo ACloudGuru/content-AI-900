@@ -8,7 +8,7 @@ cog_key = os.environ.get('azurecognitiveserviceskey')
 
 
 # Change the URL between the quotes below to run your own images!
-image_to_analyze = "https://media.sciencephoto.com/f0/03/53/55/f0035355-800px-wm.jpg"
+image_to_analyze = "https://raw.githubusercontent.com/ACloudGuru/content-AI-900/main/images/1-computervision-couple.jpg"
 
 
 computervision_client = ComputerVisionClient(cog_endpoint, CognitiveServicesCredentials(cog_key))
@@ -40,3 +40,5 @@ for face in image_analysis.faces:
     print("detected age: " + str(face.age))
     print("detected gender: " + face.gender)
 print("----------")
+
+input("\nPress Enter to Exit...")

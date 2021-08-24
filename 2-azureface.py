@@ -11,7 +11,7 @@ cog_key = os.environ.get('azurecognitiveserviceskey')
 
 
 # Change the URL between the quotes below to run your own faces through the Azure Face Service!
-face_to_analyze = "https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/family-of-four-7101-a234e9249b2c7223d4e4d8cd9432f9e9@1x.jpg"
+face_to_analyze = "https://raw.githubusercontent.com/ACloudGuru/content-AI-900/main/images/2-azureface-family.jpg"
 
 
 face_client = FaceClient(cog_endpoint, CognitiveServicesCredentials(cog_key))
@@ -69,3 +69,5 @@ def drawFaceRectangles() :
     img.show()
 
 drawFaceRectangles()
+
+input("\nPress Enter to Exit...")
