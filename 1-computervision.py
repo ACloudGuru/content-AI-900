@@ -8,7 +8,7 @@ cog_key = os.environ.get('azurecognitiveserviceskey')
 
 
 # Change the URL between the quotes below to run your own images!
-image_to_analyze = "https://raw.githubusercontent.com/ACloudGuru/content-AI-900/main/images/1-computervision-couple.jpg"
+image_to_analyze = "https://raw.githubusercontent.com/ACloudGuru/content-AI-900/main/images/image-analysis/1-computervision-couple.jpg"
 
 
 computervision_client = ComputerVisionClient(cog_endpoint, CognitiveServicesCredentials(cog_key))

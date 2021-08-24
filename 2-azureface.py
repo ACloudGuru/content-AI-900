@@ -11,7 +11,7 @@ cog_key = os.environ.get('azurecognitiveserviceskey')
 
 
 # Change the URL between the quotes below to run your own faces through the Azure Face Service!
-face_to_analyze = "https://raw.githubusercontent.com/ACloudGuru/content-AI-900/main/images/2-azureface-family.jpg"
+face_to_analyze = "https://raw.githubusercontent.com/ACloudGuru/content-AI-900/main/images/image-analysis/2-azureface-family.jpg"
 
 
 face_client = FaceClient(cog_endpoint, CognitiveServicesCredentials(cog_key))
