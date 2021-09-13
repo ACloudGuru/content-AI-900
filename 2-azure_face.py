@@ -4,8 +4,16 @@ from PIL import Image, ImageDraw
 from azure.cognitiveservices.vision.face import FaceClient
 from msrest.authentication import CognitiveServicesCredentials
 from azure.cognitiveservices.vision.face.models import TrainingStatusType, Person
-
 import os
+
+os.system("color")
+class colors:
+    green = '\033[92m'
+    blue = '\033[94m'
+    red = '\033[31m'
+    yellow = '\033[33m'
+    reset = '\033[0m'
+
 cog_endpoint = os.environ.get('azurecognitiveservicesendpoint')
 cog_key = os.environ.get('azurecognitiveserviceskey')
 
@@ -27,16 +35,16 @@ if not detected_faces:
 print("\n-----Facial Attributes-----")
 for count, face in enumerate(detected_faces):
     print()
-    print("\nPerson Number: " + str(count))
-    print("\nAge: " + str(face.face_attributes.age))
-    print("\nDetected Gender: " + str(face.face_attributes.gender))
-    print("\nEmotions: " + str(face.face_attributes.emotion))
-    print("\nFacial Hair: " + str(face.face_attributes.facial_hair))
-    print("\nGlasses: " + str(face.face_attributes.glasses))
-    print("\nSmile: " + str(face.face_attributes.smile))
-    print("\nMakeup: " + str(face.face_attributes.makeup))
+    print(f"{colors.green}\nPerson Number: {colors.reset}" + str(count))
+    print(f"{colors.yellow}\nAge: {colors.reset}" + str(face.face_attributes.age))
+    print(f"{colors.red}\nDetected Gender: {colors.reset}" + str(face.face_attributes.gender))
+    print(f"{colors.blue}\nEmotions: {colors.reset}" + str(face.face_attributes.emotion))
+    print(f"{colors.green}\nFacial Hair: {colors.reset}" + str(face.face_attributes.facial_hair))
+    print(f"{colors.yellow}\nGlasses: {colors.reset}" + str(face.face_attributes.glasses))
+    print(f"{colors.red}\nSmile: {colors.reset}" + str(face.face_attributes.smile))
+    print(f"{colors.blue}\nMakeup: {colors.reset}" + str(face.face_attributes.makeup))
     for hair in face.face_attributes.hair.hair_color:
-        print("\nHair: " + str(hair.color))
+        print(f"{colors.green}\nHair: {colors.reset}" + str(hair.color))
         break
     print("\n----------\n")
 

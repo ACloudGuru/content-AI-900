@@ -20,7 +20,7 @@ review = ["This was a great meal, I would eat here anytime!"]
 
 key_phrase = ["We should make a run for it! We don't want to be caught out in a thunderstorm!"]
 
-entities = ["Clint is going to Europe next week. He'll be there from 12-15th of August. \
+entities = ["Clint is going to Europe next week. He'll be there from 12-15th of March. \
     There is 90% chance you can find him in a World War 2 Museum at some point"]
 
 

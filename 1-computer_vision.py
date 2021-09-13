@@ -1,8 +1,16 @@
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes
 from msrest.authentication import CognitiveServicesCredentials
-
 import os
+
+os.system("color")
+class colors:
+    green = '\033[92m'
+    blue = '\033[94m'
+    red = '\033[31m'
+    yellow = '\033[33m'
+    reset = '\033[0m'
+
 cog_endpoint = os.environ.get('azurecognitiveservicesendpoint')
 cog_key = os.environ.get('azurecognitiveserviceskey')
 
@@ -18,8 +26,8 @@ image_analysis = computervision_client.analyze_image(image_to_analyze,visual_fea
 
 print("\n-----Image Description-----")
 for caption in image_analysis.description.captions:
-    print("Confidence: " + str(caption.confidence))
-    print("Description: " + caption.text)
+    print(f"{colors.green}Confidence: {colors.reset}" + str(caption.confidence))
+    print(f"{colors.green}Description: {colors.reset}" + caption.text)
 print("----------\n")
 
 
@@ -28,7 +36,8 @@ input("Press Enter to continue to image tags...\n")
 
 print("-----Image Tags-----")
 for tag in image_analysis.tags:
-    print(tag)
+    print(f"{colors.green}Tag:{colors.reset} {tag.name:<15}", 
+    f" {colors.yellow}Confidence:{colors.reset} {tag.confidence:<15}")
 print("----------\n")
 
 
@@ -37,8 +46,8 @@ input("Press Enter to continue to face detection...\n")
 
 print("-----Face Detection-----")
 for face in image_analysis.faces:
-    print("detected age: " + str(face.age))
-    print("detected gender: " + face.gender)
+    print(f"{colors.green}Detected Age: {colors.reset}" + str(face.age) + 
+    f"{colors.yellow}   Detected Gender: {colors.reset}" + face.gender)
 print("----------")
 
 input("\nPress Enter to Exit...")
