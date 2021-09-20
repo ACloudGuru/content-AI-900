@@ -16,8 +16,8 @@ text_analytics_client = TextAnalyticsClient(endpoint=cog_endpoint, credential=co
 
 
 # Change the lines below in quotes to try your own reviews! 
-review1 = ["I was at this resturant in Chicago on March 12th, all I have to say is WOW! Such fantastic food, there is a 99% chance I'll be back again!"]
-review2 = ["I ate here on May 17th and it was rough. The food came out cold and the waiter was a bit of a jerk. I won't be coming back here again."]
+review1 = ["I was at this restaurant in Chicago on March 12th, all I have to say is WOW! Such fantastic food, there is a 99% chance I'll be back again!"]
+review2 = ["I ate here on May 17th, and it was rough. The food came out cold, the waiter was a bit of a jerk, and I just didn't like it. I won't be coming back here again."]
 
 
 
