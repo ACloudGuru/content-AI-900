@@ -30,6 +30,7 @@ return_face_attributes=list(['age','gender','headPose','smile','facialHair','gla
 return_face_landmarks=True)
 if not detected_faces:
     print("No faces were found in the image! Please try another image!")
+    input("Press Enter to exit")
     quit()
 
 print("\n-----Facial Attributes-----")
